@@ -30,15 +30,17 @@
                 </tr>
             </thead>
             <tbody class="divide-y divide-gray-200">
-                <tr class="hover:bg-purple-50 transition">
-                    <td class="px-6 py-4">
-                        <a href="https://www.google.com" class="text-blue-600 hover:underline">https://www.google.com</a>
-                    </td>
-                    <td class="px-6 py-4">
-                        <a href="/123" class="text-green-600 hover:underline">/123</a>
-                    </td>
-                    <td class="px-6 py-4">10</td>
-                </tr>
+                <% shorturls.forEach(shorturl=>{%>
+                    <tr class="hover:bg-purple-50 transition">
+                        <td class="px-6 py-4">
+                            <a href="<%=shorturl.full%>" class="text-blue-600 hover:underline"><%=shorturl.full%></a>
+                        </td>
+                        <td class="px-6 py-4">
+                            <a href="<%=shorturl.short%>" class="text-green-600 hover:underline"><%=shorturl.short%></a>
+                        </td>
+                        <td class="px-6 py-4">1<%=shorturl.clicks%></td>
+                    </tr>
+                <%}) %>
             </tbody>
         </table>
     </div>
