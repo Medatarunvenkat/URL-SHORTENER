@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "This project is url shortener apis",
   "license": "ISC",
+  "engines": {
+    "node": "14.x"
+  },
   "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
